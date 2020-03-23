@@ -7,7 +7,7 @@ For most tech tests, you'll essentially have unlimited time. This practice sessi
 You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
-
+ 
 ### Specification
 
 ## Requirements
@@ -29,3 +29,38 @@ date || credit || debit || balance
 14/01/2012 || || 500.00 || 2500.00
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
+
+
+### Inputs / Outputs
+
+| Input                           | Output                                                                                         | 
+| ------------------------------- | ------------------------------------------------------------   | 
+| New Account object              | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance" |
+| ------------------------------- | ------------------------------------------------------------  | 
+| Account.desposit(1, 01/01/2020) | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
+|                                 | /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"                                |
+| ------------------------------- | ------------------------------------------------------------   | 
+| Account.desposit(1, 02/01/2020) | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
+|                                 |                              /n 02/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 2.00    |
+|                                 |                              /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"   |
+| ------------------------------- | ------------------------------------------------------------   | 
+| Account.withdraw(1, 03/01/2020) | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
+|                                 |                              /n 03/01/2020 &#124;&#124; &#124;&#124; 1.00 &#124;&#124; 1.00    | 
+|                                 |                              /n 02/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 2.00    |
+|                                 |                              /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"   |
+
+
+| Object:          | Account                                            | 
+| ---------------- | -------------------------------------------------- | 
+| **Properties:**  | statement, balance                                 |
+| **Function:**    | PrintStatement                                     |
+| **Function:**    | Deposit                                            |  
+| **Function:**    | Withdrawal                                         |  
+
+
+
+```
+A a user, 
+So I can store money safely
+I would like to be able to deposit
+```
