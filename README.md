@@ -7,13 +7,8 @@ For most tech tests, you'll essentially have unlimited time. This practice sessi
 You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
-<<<<<<< HEAD
  
 ### Specification
-=======
-
-# Specification
->>>>>>> ac0cd71c1a203f9e2f13cf65b09a8c02f91fa76e
 
 ## Requirements
 
@@ -65,7 +60,20 @@ date || credit || debit || balance
 
 
 ```
-A a user, 
+As a user, 
 So I can store money safely
 I would like to be able to deposit
+```
+
+
+```
+As a user,
+So I can receive my stored money 
+I would like to be able to withdraw
+```
+
+```
+As a user
+so I can track and see my withdraws, deposits and money
+I would like to be able to see my statements
 ```
