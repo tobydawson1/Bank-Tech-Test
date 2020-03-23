@@ -8,7 +8,7 @@ You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
  
-### Specification
+# Specification
 
 ## Requirements
 
@@ -31,7 +31,7 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 
 
-### Inputs / Outputs
+## Inputs / Outputs
 
 | Input                           | Output                                                                                         | 
 | ------------------------------- | ------------------------------------------------------------   | 
@@ -49,6 +49,7 @@ date || credit || debit || balance
 |                                 |                              /n 02/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 2.00    |
 |                                 |                              /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"   |
 
+## Functions and Methods
 
 | Object:          | Account                                            | 
 | ---------------- | -------------------------------------------------- | 
@@ -57,7 +58,7 @@ date || credit || debit || balance
 | **Function:**    | Deposit                                            |  
 | **Function:**    | Withdrawal                                         |  
 
-
+## User Stories
 
 ```
 As a user, 
