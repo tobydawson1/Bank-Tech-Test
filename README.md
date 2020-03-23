@@ -1,4 +1,4 @@
-### Bank tech test
+# Bank tech test
 
 Today, you'll practice doing a tech test.
 
@@ -8,7 +8,7 @@ You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
-### Specification
+# Specification
 
 ## Requirements
 
