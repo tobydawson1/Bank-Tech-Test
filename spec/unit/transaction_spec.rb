@@ -15,12 +15,8 @@ describe Transaction do
         expect(@transaction.amount).to equal(100)
     end
 
-    it 'should generate a date' do
-        expect(@transaction.date).to be_an_instance_of(Date)
-    end
-
     it 'should generate a matching date' do
-        expect(@transaction.date).to eq(Date.new)
+        expect(@transaction.date).to eq(Date.today.to_s)
     end
 
     it 'should contain a balance' do

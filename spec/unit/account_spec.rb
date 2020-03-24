@@ -4,6 +4,7 @@ describe Account do
 
     before :each do
         @account = Account.new
+        @date = Date.today.to_s
     end
 
     it 'can be instantialized' do
@@ -14,18 +15,26 @@ describe Account do
         expect(@account.balance).to equal(0)
     end
 
-    it 'can print a bank statement' do 
-        expect(@account.print_statement()).to contain_exactly("date  || credit  || debit  || balance 0")
-    end
-
     it 'can take a deposit' do
         @account.deposit(10)
-        expect(@account.amount).to eq(10)
+        expect(@account.deposit_amount).to eq(10)
     end
 
     it 'can withdraw money' do
         @account.withdraw(10)
-        expect(@account.amount).to eq(10)
+        expect(@account.withdraw_amount).to eq(10)
     end
+
+    it 'will update balance when deposit' do
+        @account.deposit(10)
+        expect(@account.balance).to eq(10)
+    end
+
+    it 'will update balance when deposit' do
+        @account.deposit(10)
+        @account.withdraw(5)
+        expect(@account.balance).to eq(5)
+    end
+
 
 end
