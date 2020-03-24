@@ -4,25 +4,45 @@ describe 'features' do
 
     before :each do
         @account = Account.new
-        @date = Date.today.to_s
+        @date = Date.today.strftime("%d/%m/%Y")
     end
 
     it 'can print a bank statement' do 
-        expect(@account.print_statement()).to contain_exactly("date  || credit  || debit  || balance 0")
+        expect(@account.create_statement()).to contain_exactly("date  || credit  || debit  || balance 0")
     end
 
     it 'will update balance when deposit' do
         @account.deposit(10)
-        @account.print_statement()
         expect(@account.statements).to contain_exactly("date #{@date} || credit 10 || debit  || balance 10")
     end
 
     it 'will update balance when withrawal' do
         @account.deposit(10)
-        @account.print_statement()
         @account.withdraw(5)
-        @account.print_statement()
         expect(@account.statements).to contain_exactly("date #{@date} || credit 10 || debit  || balance 10", "date #{@date} || credit  || debit 5 || balance 5")
     end
+
+    it 'can desposit twice' do
+        @account.deposit(1000)
+        @account.deposit(130)
+        expect(@account.balance).to equal(1130)
+    end
+
+    it 'can withdraw 1000' do
+        @account.deposit(1000)
+        @account.deposit(130)
+        @account.withdraw(1000)
+        expect(@account.balance).to equal(130)
+    end
+
+    it 'can withdraw twice' do
+        @account.deposit(1000)
+        @account.deposit(130)
+        @account.withdraw(1000)
+        @account.withdraw(80)
+        expect(@account.balance).to equal(50)
+    end
+
+   
 
 end

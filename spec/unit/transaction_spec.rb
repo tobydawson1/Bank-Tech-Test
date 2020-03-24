@@ -16,7 +16,7 @@ describe Transaction do
     end
 
     it 'should generate a matching date' do
-        expect(@transaction.date).to eq(Date.today.to_s)
+        expect(@transaction.date).to eq(Date.today.strftime("%d/%m/%Y"))
     end
 
     it 'should contain a balance' do

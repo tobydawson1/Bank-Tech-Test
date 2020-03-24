@@ -7,7 +7,7 @@ class Account
         @statements = []
     end
 
-    def print_statement(date = @date, credit = @deposit_amount, debit = @withdraw_amount, balance = @balance)
+    def create_statement(date = @date, credit = @deposit_amount, debit = @withdraw_amount, balance = @balance)
         @statements << "date #{date} || credit #{credit} || debit #{debit} || balance #{balance}"
     end
 
@@ -23,6 +23,7 @@ class Account
         @deposit_amount = @transaction.amount
         @date = @transaction.date
         @balance += @deposit_amount
+        create_statement
     end
 
     def withdraw(value)
@@ -30,6 +31,11 @@ class Account
         @transaction = Transaction.new(value)
         @withdraw_amount = @transaction.amount 
         @balance -= @withdraw_amount
+        create_statement
     end
     
+    def date
+        @date = Date.today.strftime("%d/%m/%Y")
+      end
+
 end

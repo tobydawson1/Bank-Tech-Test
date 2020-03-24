@@ -4,7 +4,7 @@ describe Account do
 
     before :each do
         @account = Account.new
-        @date = Date.today.to_s
+        
     end
 
     it 'can be instantialized' do
