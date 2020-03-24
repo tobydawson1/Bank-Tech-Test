@@ -8,7 +8,7 @@ You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
  
-### Specification
+# Specification
 
 ## Requirements
 
@@ -19,19 +19,20 @@ Data can be kept in memory (it doesn't need to be stored to a database or anythi
 
 ## Acceptance criteria
 
-Given a client makes a deposit of 1000 on 10-01-2012
-And a deposit of 2000 on 13-01-2012
-And a withdrawal of 500 on 14-01-2012
-When she prints her bank statement
-Then she would see
+* Given a client makes a deposit of 1000 on 10-01-2012
+* And a deposit of 2000 on 13-01-2012
+* And a withdrawal of 500 on 14-01-2012
+* When she prints her bank statement
+* Then she would see
 
-date || credit || debit || balance
-14/01/2012 || || 500.00 || 2500.00
-13/01/2012 || 2000.00 || || 3000.00
-10/01/2012 || 1000.00 || || 1000.00
+```
+* date || credit || debit || balance
+* 14/01/2012 || || 500.00 || 2500.00
+* 13/01/2012 || 2000.00 || || 3000.00
+* 10/01/2012 || 1000.00 || || 1000.00
+```
 
-
-### Inputs / Outputs
+## Inputs / Outputs
 
 | Input                           | Output                                                                                         | 
 | ------------------------------- | ------------------------------------------------------------   | 
@@ -49,6 +50,7 @@ date || credit || debit || balance
 |                                 |                              /n 02/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 2.00    |
 |                                 |                              /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"   |
 
+## Functions and Methods
 
 | Object:          | Account                                            | 
 | ---------------- | -------------------------------------------------- | 
@@ -57,7 +59,7 @@ date || credit || debit || balance
 | **Function:**    | Deposit                                            |  
 | **Function:**    | Withdrawal                                         |  
 
-
+## User Stories
 
 ```
 As a user, 
