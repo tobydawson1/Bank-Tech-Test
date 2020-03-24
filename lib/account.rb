@@ -4,18 +4,18 @@ class Account
 
     def initialize()
         @balance = 0
-        @statements = []
+        @statements = ["date  || credit  || debit  || balance"]
     end
 
     def create_statement(date = @date, credit = @deposit_amount, debit = @withdraw_amount, balance = @balance)
         @statements << "date #{date} || credit #{credit} || debit #{debit} || balance #{balance}"
     end
 
-    #def print_statement2
-    #    @statments.each do |s|
-    #        puts s 
-    #    end
-    #end
+    def print_statement
+        @statements.each{ |s|
+            puts s 
+        }
+    end
 
     def deposit(value)
         @withdraw_amount = nil

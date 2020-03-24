@@ -8,18 +8,18 @@ describe 'features' do
     end
 
     it 'can print a bank statement' do 
-        expect(@account.create_statement()).to contain_exactly("date  || credit  || debit  || balance 0")
+        expect(@account.statements()).to contain_exactly("date  || credit  || debit  || balance")
     end
 
     it 'will update balance when deposit' do
         @account.deposit(10)
-        expect(@account.statements).to contain_exactly("date #{@date} || credit 10 || debit  || balance 10")
+        expect(@account.statements).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10 || debit  || balance 10")
     end
 
     it 'will update balance when withrawal' do
         @account.deposit(10)
         @account.withdraw(5)
-        expect(@account.statements).to contain_exactly("date #{@date} || credit 10 || debit  || balance 10", "date #{@date} || credit  || debit 5 || balance 5")
+        expect(@account.statements).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10 || debit  || balance 10", "date #{@date} || credit  || debit 5 || balance 5")
     end
 
     it 'can desposit twice' do
@@ -43,6 +43,9 @@ describe 'features' do
         expect(@account.balance).to equal(50)
     end
 
-   
+    it 'will print statements' do
+        @account.deposit(10)
+        expect(@account.print_statement).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10 || debit  || balance 10")
+    end
 
 end
