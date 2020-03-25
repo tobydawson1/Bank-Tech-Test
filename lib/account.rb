@@ -4,6 +4,7 @@ class Account
 
     def initialize()
         @balance = 0
+        @date
         @statements = ["date  || credit  || debit  || balance"]
     end
 
@@ -17,8 +18,14 @@ class Account
         }
     end
 
-    def deposit(value)
+    def variable_reset
         @withdraw_amount = nil
+        @date =nil
+        @deposit_amount = nil
+    end
+
+    def deposit(value)
+        variable_reset
         @transaction = Transaction.new(value)
         @deposit_amount = @transaction.amount
         @date = @transaction.date
@@ -27,15 +34,13 @@ class Account
     end
 
     def withdraw(value)
-        @deposit_amount = nil
+        variable_reset
         @transaction = Transaction.new(value)
-        @withdraw_amount = @transaction.amount 
+        @withdraw_amount = @transaction.amount
+        @date = @transaction.date
         @balance -= @withdraw_amount
         create_statement
     end
-    
-    def date
-        @date = Date.today.strftime("%d/%m/%Y")
-      end
 
+    
 end
