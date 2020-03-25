@@ -7,7 +7,18 @@ For most tech tests, you'll essentially have unlimited time. This practice sessi
 You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
- 
+
+
+# How to run
+
+### For testing please type
+
+Rspec
+
+### For running the program
+
+IRB 
+
 # Specification
 
 ## Requirements
