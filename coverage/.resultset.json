@@ -4,10 +4,12 @@
       "/Users/tobydawson/Projects/Tech-Test-the-First/spec/feature/account_feature_spec.rb": {
         "lines": [
           1,
-          null,
           1,
           null,
           1,
+          null,
+          1,
+          7,
           7,
           7,
           null,
@@ -65,20 +67,10 @@
           12,
           null,
           12,
+          12,
           null,
           null,
           1,
-          18,
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          1,
-          18,
           18,
           18,
           null,
@@ -99,8 +91,42 @@
           6,
           6,
           6,
+          null,
+          null,
+          1,
+          18,
+          18,
+          18,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
           null,
           null
+        ]
+      },
+      "/Users/tobydawson/Projects/Tech-Test-the-First/lib/statement.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          19,
+          null,
+          null,
+          1,
+          18,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tobydawson/Projects/Tech-Test-the-First/spec/feature/statement_feature_spec.rb": {
+        "lines": [
+          1
         ]
       },
       "/Users/tobydawson/Projects/Tech-Test-the-First/spec/unit/account_spec.rb": {
@@ -185,6 +211,6 @@
         ]
       }
     },
-    "timestamp": 1585149921
+    "timestamp": 1585153311
   }
 }

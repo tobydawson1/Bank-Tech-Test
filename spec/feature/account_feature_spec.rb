@@ -1,14 +1,16 @@
 require 'account'
+require 'statement'
 
 describe 'features' do
 
   before :each do
     @account = Account.new
+    @statement = Statement.new
     @date = Date.today.strftime("%d/%m/%Y")
   end
 
   it 'can print a bank statement' do 
-    expect(@account.statements()).to contain_exactly("date  || credit  || debit  || balance")
+    expect(@statement.record).to contain_exactly("date  || credit  || debit  || balance")
   end
 
   it 'will update balance when deposit' do
@@ -45,6 +47,6 @@ describe 'features' do
 
   it 'will print statements' do
     @account.deposit(10)
-    expect(@account.print_statement).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10.00 || debit 0.00 || balance 10.00")
+    expect(@account.statements).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10.00 || debit 0.00 || balance 10.00")
   end
 end
