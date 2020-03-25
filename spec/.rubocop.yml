@@ -46,7 +46,7 @@ Metrics/LineLength:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-  Max: 100
+  Max: 300
 
 Metrics/BlockLength:
   Exclude:
@@ -92,7 +92,7 @@ IdenticalConditionalBranches:
 InverseMethods:
   Enabled: true
 LeadingCommentSpace:
-  Enabled: true
+  Enabled: false
 NegatedIf:
   Enabled: true
 NegatedWhile:
