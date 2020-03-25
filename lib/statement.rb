@@ -5,7 +5,7 @@ class Statement
     @record = ["date  || credit  || debit  || balance"]
   end
   
-  def create_statement(date = @date, credit = "#{@deposit_amount.to_f}0", debit = "#{@withdraw_amount.to_f}0", balance = "#{@balance.to_f}0")
+  def create_statement(date, credit, debit, balance)
     @record << "date #{date} || credit #{credit} || debit #{debit} || balance #{balance}"
   end
 

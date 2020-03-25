@@ -9,7 +9,7 @@ class Account
     @statement = Statement.new
   end
 
-  def state
+  def push_statement
      @statement.create_statement(@date, "#{@deposit_amount.to_f}0", "#{@withdraw_amount.to_f}0", "#{@balance.to_f}0")
     @statements = @statement.record
   end
@@ -20,7 +20,7 @@ class Account
     @deposit_amount = @transaction.amount
     @date = @transaction.date
     @balance += @deposit_amount
-    state
+    push_statement
   end
 
   def withdraw(value)
@@ -29,13 +29,13 @@ class Account
     @withdraw_amount = @transaction.amount
     @date = @transaction.date 
     @balance -= @withdraw_amount
-    state
+    push_statement
   end   
 
   def reset_variables
-    @withdraw_amount = nil
-    @date =nil
-    @deposit_amount = nil
+    @withdraw_amount = 0
+    @date = nil
+    @deposit_amount = 0
   end
 
   def print_statement

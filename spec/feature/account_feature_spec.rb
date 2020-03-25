@@ -9,10 +9,6 @@ describe 'features' do
     @date = Date.today.strftime("%d/%m/%Y")
   end
 
-  it 'can print a bank statement' do 
-    expect(@statement.record).to contain_exactly("date  || credit  || debit  || balance")
-  end
-
   it 'will update balance when deposit' do
     @account.deposit(10)
     expect(@account.statements).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10.00 || debit 0.00 || balance 10.00")
@@ -47,6 +43,6 @@ describe 'features' do
 
   it 'will print statements' do
     @account.deposit(10)
-    expect(@account.statements).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10.00 || debit 0.00 || balance 10.00")
+    expect(@account.print_statement).to contain_exactly("date  || credit  || debit  || balance", "date #{@date} || credit 10.00 || debit 0.00 || balance 10.00")
   end
 end
