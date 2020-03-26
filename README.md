@@ -47,16 +47,16 @@ Data can be kept in memory (it doesn't need to be stored to a database or anythi
 
 | Input                           | Output                                                                                         | 
 | ------------------------------- | ------------------------------------------------------------   | 
-| New Account object              | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance" |
+| New Account object              | print_statement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance" |
 | ------------------------------- | ------------------------------------------------------------  | 
-| Account.desposit(1, 01/01/2020) | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
+| Account.desposit(1)             | print_statement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
 |                                 | /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"                                |
 | ------------------------------- | ------------------------------------------------------------   | 
-| Account.desposit(1, 02/01/2020) | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
+| Account.desposit(1)             | print_statement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
 |                                 |                              /n 02/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 2.00    |
 |                                 |                              /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"   |
 | ------------------------------- | ------------------------------------------------------------   | 
-| Account.withdraw(1, 03/01/2020) | PrintStatement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
+| Account.withdraw(1) | print_statement should print "date &#124;&#124; credit &#124;&#124; debit &#124;&#124; balance  |
 |                                 |                              /n 03/01/2020 &#124;&#124; &#124;&#124; 1.00 &#124;&#124; 1.00    | 
 |                                 |                              /n 02/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 2.00    |
 |                                 |                              /n 01/01/2020 &#124;&#124; 1.00 &#124;&#124; &#124;&#124; 1.00"   |
@@ -66,7 +66,7 @@ Data can be kept in memory (it doesn't need to be stored to a database or anythi
 | Object:          | Account                                            | 
 | ---------------- | -------------------------------------------------- | 
 | **Properties:**  | statement, balance                                 |
-| **Function:**    | PrintStatement                                     |
+| **Function:**    | print_statement                                     |
 | **Function:**    | Deposit                                            |  
 | **Function:**    | Withdrawal                                         |  
 
