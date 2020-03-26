@@ -21,7 +21,7 @@ IRB
 
 ### Example
 
-![Image description](link-to-image)
+![Image description](https://github.com/tobydawson1/Tech-Test-the-First/blob/master/Example.png)
 
 # Specification
 
