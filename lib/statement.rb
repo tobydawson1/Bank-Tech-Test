@@ -6,6 +6,6 @@ class Statement
   end
 
   def create_statement(date, credit, debit, balance)
-    @record << "date #{date} || credit #{credit} || debit #{debit} || balance #{balance}"
+    @record << "#{date} || #{credit} || #{debit} || #{balance}"
   end
 end
