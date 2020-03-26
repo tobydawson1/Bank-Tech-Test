@@ -19,6 +19,10 @@ Rspec
 
 IRB 
 
+### Example
+
+![Image description](link-to-image)
+
 # Specification
 
 ## Requirements
