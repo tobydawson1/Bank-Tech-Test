@@ -6,9 +6,7 @@ class Account
   end
 
   def push_statement(deposit, withdraw)
-    @deposit_amount = deposit
-    @withdraw_amount = withdraw
-    @statement.create_statement(@date = Date.today.strftime("%d/%m/%Y"), @deposit_amount, @withdraw_amount, "#{@balance.to_f}0")
+    @statement.create_statement(@date = Date.today.strftime("%d/%m/%Y"), deposit, withdraw, "#{@balance.to_f}0")
     @statements = @statement.record
   end
 
@@ -16,14 +14,14 @@ class Account
     @transaction = Transaction.new(value)
     @deposit_amount = @transaction.amount
     @balance += @deposit_amount
-    push_statement("#{@deposit_amount.to_f}0", nil)
+    push_statement("#{@deposit_amount.to_f}0 ", nil)
   end
 
   def withdraw(value)
     @transaction = Transaction.new(value)
     @withdraw_amount = @transaction.amount
     @balance -= @withdraw_amount
-    push_statement(nil, "#{@withdraw_amount.to_f}0")
+    push_statement(nil, "#{@withdraw_amount.to_f}0 ")
   end
 
 
