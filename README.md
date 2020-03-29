@@ -11,13 +11,24 @@ You'll work alone, and you'll also review your own code so you can practice refl
 
 # How to run
 
-### For testing please type
-
-Rspec
-
 ### For running the program
 
-IRB 
+    Clone repository onto your local machine and cd into it
+    gem install bundle
+    open IRB
+    require './lib/transaction'
+    require './lib/statement'
+    require './lib/account'
+    Initialize the account class (account = Account.new)
+    
+    Actions
+        - account.deposit(amount)
+        - account.withdraw(amount)
+        - account.print_statment
+    
+### For testing please type
+
+After Cloning and bundle install please run the command rspec into the terminal 
 
 ### Example
 
@@ -70,7 +81,19 @@ Data can be kept in memory (it doesn't need to be stored to a database or anythi
 | Object:          | Account                                            | 
 | ---------------- | -------------------------------------------------- | 
 | **Properties:**  | statement, balance                                 |
-| **Function:**    | print_statement                                     |
+| **Function:**    | print_statement                                    |
+| **Function:**    | Deposit                                            |  
+| **Function:**    | Withdrawal                                         |  
+
+| Object:          | Transaction                                        | 
+| ---------------- | -------------------------------------------------- | 
+| **Properties:**  | Amount, Date, Balance                              |
+
+
+| Object:          | Statement                                          | 
+| ---------------- | -------------------------------------------------- | 
+| **Properties:**  |                                                    |
+| **Function:**    | create_statement                                   |
 | **Function:**    | Deposit                                            |  
 | **Function:**    | Withdrawal                                         |  
 
@@ -94,3 +117,18 @@ As a user
 so I can track and see my withdraws, deposits and money
 I would like to be able to see my statements
 ```
+
+### Tech Stack
+
+Back-end
+
+Ruby
+
+Testing
+
+SimpleCov
+RSPEC
+
+Linting 
+
+Rubocop
